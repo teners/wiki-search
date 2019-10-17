@@ -3,6 +3,7 @@
 A simple web service to search Wikipedia.
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/29c44f43d1b6afba3846/maintainability)](https://codeclimate.com/github/teners/wiki-search/maintainability)
+[![Actions Status](https://github.com/teners/wiki-search/workflows/wiki-search/badge.svg)](https://github.com/teners/wiki-search/actions?workflow=wiki-search)
 
 ![](https://media.giphy.com/media/3o6Zt9EEeSSNLd2nqU/giphy.gif)
 
@@ -65,7 +66,7 @@ through `--env-file` or `--env`.
 
 \[2\] [`docker build` reference][2]
 
-\[3\] — [`docker run` reference][3]
+\[3\] [`docker run` reference][3]
 
 
 [1]: http://poetry.eustace.io "Poetry" 
