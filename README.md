@@ -2,6 +2,8 @@
 
 A simple web service to search Wikipedia.
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/29c44f43d1b6afba3846/maintainability)](https://codeclimate.com/github/teners/wiki-search/maintainability)
+
 ![](https://media.giphy.com/media/3o6Zt9EEeSSNLd2nqU/giphy.gif)
 
 ## Using without Docker
