@@ -8,7 +8,7 @@ A simple web service to search Wikipedia.
 
 ### Installation
 
-Poetry[1] is used for dependencies management in wiki-search.
+Poetry[\[1\]][1] is used for dependencies management in wiki-search.
 In case you don't have it, install it first.  
 
 Install dependencies:
@@ -53,9 +53,18 @@ This command would build wiki-search image and run it for you
 in tow with Redis.
 
 Alternatively, if you have Redis running somewhere else, you
-can build wiki-search image manually with `docker build`[2]
-command and run with `docker run`[3] providing `REDIS_URI`
+can build wiki-search image manually with `docker build`[\[2\]][2]
+command and run with `docker run`[\[3\]][3] providing `REDIS_URI`
 through `--env-file` or `--env`.
+
+## References
+
+\[1\] [Poetry][1]
+
+\[2\] [`docker build` reference][2]
+
+\[3\] — [`docker run` reference][3]
+
 
 [1]: http://poetry.eustace.io "Poetry" 
 [2]: https://docs.docker.com/engine/reference/commandline/build/ "docker build reference"
