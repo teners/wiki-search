@@ -36,14 +36,14 @@ def inject_timing(request_type: Optional[RequestType]):
 
 
 class SearchQuery(BaseModel):
-    query: List[str] = Schema(..., min_items=1)
+    query: List[str] = Schema(..., min_items=1)  # type: ignore
 
 
 class PageRevision(BaseModel):
     class Config:  # noqa WPS431
         extra = Extra.ignore
 
-    revision_id: int = Schema(..., alias='revid')
+    revision_id: int = Schema(..., alias='revid')  # type: ignore
     comment: str
     timestamp: datetime
 

@@ -18,11 +18,12 @@ better-exceptions = "^0.2.2"
 [tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.12.5"
 black = "19.3b0"
-
-[build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+mypy = "^0.740.0"
 
 [tool.black]
 line-length = 100
 skip-string-normalization = true
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
