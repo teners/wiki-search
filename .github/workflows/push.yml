@@ -1,0 +1,21 @@
+name: wiki-search
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies
+      uses: abatilo/actions-poetry@master
+      with:
+        args: install
+    - name: Run flake8
+      uses: abatilio/actions-poetry@master
+      with:
+        args: run flake8
+    - name: Run mypy
+      uses: abatilio/actions-poetry@master
+      with:
+        args: run mypy --ignore-missing-imports --strict-optional .
