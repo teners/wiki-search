@@ -1,6 +1,12 @@
-name: wiki-search
+name: linting
 
-on: [push]
+on: 
+  push:
+    paths:
+      - '**'
+      - '!README.md'
+      - '!.gitignore'
+      - '!.dockerignore'
 
 jobs:
   lint:
