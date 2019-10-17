@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>wiki-search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    {% if not wikipages %}
+        <div class="container">
+            <p class="text-muted">No results</p>
+        </div>
+    {% endif %}
+
+    <div class="container jumbotron">
+        <h1>query: {{ queries }}</h1>
+        <span class="badge {{ 'badge-success' if timing.request_type == 'redis' else 'badge-warning' }}">
+            {{ timing.request_type.value }}: {{ timing.request_time.total_seconds() }}s
+        </span>
+    </div>
+
+    {% for page in wikipages %}
+        <div class="container jumbotron">
+            <h2>{{ page.title }} <a href="{{ wikipedia_url }}?title={{page.title}}">🔗</a></h2>
+            <span class="badge {{ 'badge-success' if page.timing.request_type == 'redis' else 'badge-warning' }}">
+                {{ page.timing.request_type.value }}: {{ page.timing.request_time.total_seconds() }}s
+            </span>
+            {% for revision in page.revisions %}
+                <p>
+                    Revision <a href="{{ wikipedia_url }}?title={{page.title}}&oldid={{ revision.revision_id }}">{{ revision.revision_id }}</a> <span class="text-muted text-right">{{ revision.timestamp.ctime() }}</span>
+                    <br>
+                    {{ revision.comment or '<span class="text-muted">No comment for revision</span>'}}
+                </p>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  redis:
+    container_name: wiki-search-redis
+    image: redis:latest
+    restart: unless-stopped
+  wiki-search:
+    container_name: wiki-search
+    build: .
+    restart: unless-stopped
+    depends_on:
+      - redis
+    links:
+      - redis:redis_uri
+    environment:
+        - REDIS_URI=redis://redis_uri:6379
+    init: true
+    ports:
+      - 8000:8000
