@@ -14,4 +14,3 @@ REDIS_URI = config('REDIS_URI')
 PAGES_LIMIT = config('PAGES_LIMIT', default=5)
 REVISIONS_LIMIT = config('REVISIONS_LIMIT', default=10)
 CACHE_TTL_IN_SECONDS = 24 * 60 * 60
-
