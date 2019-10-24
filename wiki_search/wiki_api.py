@@ -71,7 +71,7 @@ async def get_page_ids(
 
     page_ids = await _perform_search_request(query_string)
 
-    bg_tasks.add_task(ctx.redis.set, query_hash, pickle.dumps(page_ids))
+    bg_tasks.add_task(ctx.redis.set, query_hash, pickle.dumps(page_ids), expire=config.CACHE_TTL_IN_SECONDS)
     return page_ids
 
 
@@ -119,7 +119,7 @@ async def get_revisions(page_id: int, bg_tasks: BackgroundTasks) -> WikiPage:
 
     page = await _perform_revisions_request(page_id)
 
-    bg_tasks.add_task(ctx.redis.set, page_id, pickle.dumps(page))
+    bg_tasks.add_task(ctx.redis.set, page_id, pickle.dumps(page), expire=config.CACHE_TTL_IN_SECONDS)
     return page
 
 
