@@ -600,7 +600,7 @@ description = "The next generation HTTP client."
 name = "httpx"
 optional = false
 python-versions = ">=3.6"
-version = "0.7.5"
+version = "0.7.8"
 
 [package.dependencies]
 certifi = "*"
@@ -1076,7 +1076,7 @@ beautifulsoup4 = "*"
 requests = ">=2.0.0,<3.0.0"
 
 [metadata]
-content-hash = "569e053d7311713f68a3f48aa2a21b9b791685ec9c0f194120d9746b2fd0d1e5"
+content-hash = "d955fb8f2344bc6d02d9b6d914b3e0f3c50325ff501dc405a2437d374007f64d"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -1135,7 +1135,7 @@ hiredis = ["0124911115f2cb7deb4f8e221e109a53d3d718174b238a2c5e2162175a3929a5", "
 hpack = ["0edd79eda27a53ba5be2dfabf3b15780928a0dff6eb0c60a3d6767720e970c89", "8eec9c1f4bfae3408a3f30500261f7e6a65912dc138526ea054f9ad98892e9d2"]
 hstspreload = ["68f4c208e4a13b3d03d33a9ddfb89f6db93718d7609a96d91ff10070e7fcd6fc"]
 httptools = ["e00cbd7ba01ff748e494248183abc6e153f49181169d8a3d41bb49132ca01dfc"]
-httpx = ["93df0398c61607020b042b4914f0e9d75d69ccdc172d8c545da7c56b116e49d0", "f542c906e0fc604b9d03e0f498d478636ed51443e970b48e62883640e6d0e89b"]
+httpx = ["4315a1dcd19ccd40b58b6630093880ba81d962a902de77f8e87a3d984e62b3f5", "a54fea66c94ba68ac373f43e659698da602f8c9a8a817387385fee3b225a7870"]
 hyperframe = ["5187962cb16dcc078f23cb5a4b110098d546c3f41ff2d4038a9896893bbd0b40", "a9f5c17f2cc3c719b917c4f33ed1c61bd1f8dfac4b1bd23b7c80b3400971b41f"]
 idna = ["c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407", "ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"]
 isort = ["54da7e92468955c4fceacd0c86bd0ec997b0e1ee80d97f67c35a78b719dccab1", "6e811fcb295968434526407adb8796944f1988c5b65e8139058f2014cbe100fd"]
