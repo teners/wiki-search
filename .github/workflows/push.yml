@@ -16,18 +16,18 @@ jobs:
     - name: Install dependencies
       uses: abatilo/actions-poetry@v1.1.0
       with:
-        python: 3.8.0
+        python_version: 3.7.5
         poetry_version: 0.12.17
         args: install
     - name: Run flake8
       uses: abatilo/actions-poetry@v1.1.0
       with:
-        python: 3.8.0
+        python_version: 3.7.5
         poetry_version: 0.12.17
         args: run flake8
     - name: Run mypy
       uses: abatilo/actions-poetry@v1.1.0
       with:
-        python: 3.8.0
+        python_version: 3.7.5
         poetry_version: 0.12.17
         args: run mypy --ignore-missing-imports --strict-optional .
