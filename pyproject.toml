@@ -16,7 +16,7 @@ python-dotenv = "^0.10.3"
 python-decouple = "^3.3"
 better-exceptions = "^0.2.2"
 [tool.poetry.dev-dependencies]
-wemake-python-styleguide = "^0.13.0"
+wemake-python-styleguide = "^0.13.4"
 black = "19.10b0"
 mypy = "^0.740.0"
 
