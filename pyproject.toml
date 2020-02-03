@@ -11,7 +11,7 @@ wikipedia = "^1.4"
 httpx = "^0.7.8"
 fastapi = {version = "^0.42.0", extras = ["all"]}
 aioredis = "^1.3"
-returns = "^0.11.0"
+returns = "^0.13.0"
 python-dotenv = "^0.10.3"
 python-decouple = "^3.3"
 better-exceptions = "^0.2.2"
